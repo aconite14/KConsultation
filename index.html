@@ -33,13 +33,13 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 3px solid #3967F0;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -49,21 +49,21 @@
         }
 
         .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
-            border-radius: 8px;
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
             transition: transform 0.3s ease;
         }
 
         .logo-section:hover .logo-icon {
             transform: rotate(10deg);
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
         }
 
         .brand-text {
@@ -82,7 +82,7 @@
 
         .brand-subtitle {
             font-size: 11px;
-            color: #888;
+            color: #3967F0;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 600;
@@ -106,7 +106,7 @@
         }
 
         nav a:hover {
-            color: #1a4d2e;
+            color: #3967F0;
         }
 
         nav a::after {
@@ -116,7 +116,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #1a4d2e;
+            background: #3967F0;
             transition: width 0.3s ease;
         }
 
@@ -125,7 +125,7 @@
         }
 
         nav a.active {
-            color: #1a4d2e;
+            color: #3967F0;
         }
 
         nav a.active::after {
@@ -134,7 +134,7 @@
 
         /* CTA Button */
         .cta-button {
-            background: #1a4d2e;
+            background: linear-gradient(135deg, #D8740E 0%, #E8930F 100%);
             color: white;
             padding: 12px 28px;
             border: none;
@@ -149,9 +149,9 @@
         }
 
         .cta-button:hover {
-            background: #0f3d24;
+            background: linear-gradient(135deg, #B8610B 0%, #C87209 100%);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(26, 77, 46, 0.3);
+            box-shadow: 0 4px 15px rgba(216, 116, 14, 0.4);
         }
 
         /* Sections */
@@ -181,7 +181,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
+            background: linear-gradient(135deg, #3967F0 0%, #2952C3 100%);
             color: white;
             gap: 30px;
         }
@@ -225,14 +225,12 @@
         }
 
         .hero .cta-button {
-            background: white;
-            color: #1a4d2e;
             margin-top: 20px;
             animation: slideInUp 0.8s ease-out 0.4s both;
         }
 
         .hero .cta-button:hover {
-            background: #f0f0f0;
+            background: linear-gradient(135deg, #B8610B 0%, #C87209 100%);
         }
 
         /* Services Section */
@@ -262,7 +260,8 @@
             text-align: center;
             animation: scaleIn 0.6s ease-out forwards;
             opacity: 0;
-            border-top: 4px solid #1a4d2e;
+            border-left: 4px solid #3967F0;
+            border-right: 4px solid #D8740E;
         }
 
         @keyframes scaleIn {
@@ -282,7 +281,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 40px rgba(57, 103, 240, 0.2);
         }
 
         .service-icon {
@@ -293,7 +292,7 @@
         .service-card h3 {
             font-size: 20px;
             margin-bottom: 15px;
-            color: #1a1a1a;
+            color: #3967F0;
         }
 
         .service-card p {
@@ -305,13 +304,14 @@
         /* About Section */
         .about-section {
             text-align: center;
+            background: linear-gradient(to bottom, #f0f5ff 0%, #f9f9f9 100%);
         }
 
         .about-section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
             margin-bottom: 30px;
-            color: #1a1a1a;
+            color: #3967F0;
         }
 
         .about-content {
@@ -320,7 +320,8 @@
             background: white;
             padding: 50px 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(57, 103, 240, 0.1);
+            border-left: 5px solid #D8740E;
             line-height: 1.8;
             font-size: 16px;
             color: #555;
@@ -349,26 +350,36 @@
         }
 
         .approach-card {
-            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
+            background: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             animation: slideInUp 0.6s ease-out forwards;
             opacity: 0;
+            border-top: 5px solid #3967F0;
         }
 
-        .approach-card:nth-child(1) { animation-delay: 0.1s; }
-        .approach-card:nth-child(2) { animation-delay: 0.2s; }
-        .approach-card:nth-child(3) { animation-delay: 0.3s; }
+        .approach-card:nth-child(1) { 
+            animation-delay: 0.1s;
+            border-top-color: #3967F0;
+        }
+        .approach-card:nth-child(2) { 
+            animation-delay: 0.2s;
+            border-top-color: #D8740E;
+        }
+        .approach-card:nth-child(3) { 
+            animation-delay: 0.3s;
+            border-top-color: #3967F0;
+        }
 
         .approach-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(57, 103, 240, 0.2);
         }
 
         .approach-number {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #3967F0 0%, #2952C3 100%);
             color: white;
             font-size: 36px;
             font-weight: bold;
@@ -376,9 +387,12 @@
             text-align: center;
         }
 
+        .approach-card:nth-child(2) .approach-number {
+            background: linear-gradient(135deg, #D8740E 0%, #B8610B 100%);
+        }
+
         .approach-content {
             padding: 30px;
-            color: white;
             text-align: left;
         }
 
@@ -386,24 +400,29 @@
             font-size: 20px;
             margin-bottom: 15px;
             text-align: center;
+            color: #3967F0;
+        }
+
+        .approach-card:nth-child(2) .approach-content h3 {
+            color: #D8740E;
         }
 
         .approach-content p {
             font-size: 14px;
             line-height: 1.6;
-            opacity: 0.95;
+            color: #555;
         }
 
         /* Why Us Section */
         .why-us-section {
-            background: #f5f5f5;
+            background: #f0f5ff;
         }
 
         .why-us-section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
             margin-bottom: 50px;
-            color: #1a1a1a;
+            color: #3967F0;
             text-align: center;
         }
 
@@ -419,13 +438,14 @@
             background: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 15px rgba(57, 103, 240, 0.05);
             display: flex;
             gap: 20px;
             align-items: flex-start;
             transition: all 0.3s ease;
             animation: slideInUp 0.6s ease-out forwards;
             opacity: 0;
+            border-left: 4px solid #D8740E;
         }
 
         .why-us-item:nth-child(1) { animation-delay: 0.1s; }
@@ -435,7 +455,7 @@
 
         .why-us-item:hover {
             transform: translateX(10px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(57, 103, 240, 0.15);
         }
 
         .why-us-icon {
@@ -447,7 +467,7 @@
         .why-us-text h3 {
             font-size: 18px;
             margin-bottom: 8px;
-            color: #1a4d2e;
+            color: #3967F0;
         }
 
         .why-us-text p {
@@ -458,7 +478,7 @@
 
         /* Contact Section */
         .contact-section {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #3967F0 0%, #2952C3 100%);
             color: white;
             text-align: center;
         }
@@ -480,8 +500,8 @@
         .contact-form input,
         .contact-form textarea {
             padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 4px;
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -496,12 +516,13 @@
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 10px rgba(26, 77, 46, 0.5);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #D8740E;
+            box-shadow: 0 0 10px rgba(216, 116, 14, 0.5);
         }
 
         .contact-form button {
-            background: #1a4d2e;
+            background: #D8740E;
             color: white;
             padding: 15px;
             border: none;
@@ -513,17 +534,19 @@
         }
 
         .contact-form button:hover {
-            background: #0f3d24;
+            background: #B8610B;
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(216, 116, 14, 0.4);
         }
 
         /* Footer */
         footer {
-            background: #0a0a0a;
+            background: #1a1a1a;
             color: rgba(255, 255, 255, 0.7);
             padding: 30px 50px;
             text-align: center;
             font-size: 14px;
+            border-top: 3px solid #D8740E;
         }
 
         /* Responsive */
@@ -555,7 +578,14 @@
     <!-- Header -->
     <header>
         <div class="logo-section" onclick="scrollToSection('home')">
-            <div class="logo-icon">K</div>
+            <div class="logo-icon">
+                <svg width="403" height="403" viewBox="0 0 403 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="16.5" y="16.5" width="369.615" height="369.615" stroke="#D8740E" stroke-width="33"/>
+                    <path d="M215.121 64.3911L119.446 196.992L129.114 212.501L217.727 340.208H271.416L171.857 197.01L266.203 64.3911H215.121Z" fill="#3967F0"/>
+                    <path d="M283.913 64.3911L188.238 196.992L197.907 212.501L303.474 369.574H357.163L240.649 197.01L334.996 64.3911H283.913Z" fill="#D8740E"/>
+                    <path d="M109.319 28.8077H62.4065V338.224H109.319V194.96V161.475V28.8077Z" fill="#D8740E"/>
+                </svg>
+            </div>
             <div class="brand-text">
                 <div class="brand-name">KConsultancy</div>
                 <div class="brand-subtitle">Manpower Solutions</div>
@@ -694,7 +724,6 @@
     </footer>
 
     <script>
-        // Smooth scroll animation for navigation links
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
@@ -703,7 +732,6 @@
             }
         }
 
-        // Update active navigation link
         function updateActiveLink(sectionId) {
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
@@ -714,7 +742,6 @@
             });
         }
 
-        // Detect scroll position and update active link
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section');
             let currentSection = '';
@@ -732,30 +759,23 @@
             }
         });
 
-        // Handle form submission
         function handleFormSubmit(event) {
             event.preventDefault();
             const form = event.target;
             
-            // Get form values
             const name = form.querySelector('input[type="text"]').value;
             const email = form.querySelector('input[type="email"]').value;
             const company = form.querySelectorAll('input[type="text"]')[1].value;
-            const message = form.querySelector('textarea').value;
 
-            // Show success message
             alert(`Thank you, ${name}! We've received your inquiry and will contact you shortly at ${email}. We're excited to help ${company} build a great team!`);
             
-            // Reset form
             form.reset();
         }
 
-        // Add scroll animation to sections on load
         document.addEventListener('DOMContentLoaded', () => {
             updateActiveLink('home');
         });
 
-        // Logo click to scroll home
         document.querySelector('.logo-section').addEventListener('click', () => {
             scrollToSection('home');
         });
