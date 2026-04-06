@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(128, 0, 128, 0.7), rgba(255, 255, 255, 0.7));
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    margin: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 10px;
+}
+
+.card p {
+    color: #ffffff;
+    padding: 0 10px 10px 10px;
+}
+
+@media screen and (orientation: landscape) {
+    .card {
+        width: 400px;
+    }
+}
