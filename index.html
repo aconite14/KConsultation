@@ -618,7 +618,6 @@
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin-bottom: 50px;
             flex-wrap: wrap;
         }
 
@@ -627,62 +626,6 @@
             font-size: 16px;
             font-weight: 500;
             letter-spacing: 0.2px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            letter-spacing: 0.2px;
-        }
-
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.25);
-            border-color: #D8740E;
-            box-shadow: 0 0 10px rgba(216, 116, 14, 0.5);
-        }
-
-        .contact-form button {
-            background: #D8740E;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.3px;
-        }
-
-        .contact-form button:hover {
-            background: #B8610B;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(216, 116, 14, 0.4);
         }
 
         /* Footer */
@@ -888,7 +831,7 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             
-            <p class="contact-label">— GET IN TOUCH</p>
+            <p class="contact-label">— GET IN TOUCH —</p>
             
             <h2 class="contact-title">
                 Begin Your <span>Partnership</span><br>
@@ -904,14 +847,6 @@
                 <p>hello@kconsultancy.com</p>
                 <p>+62 812-XXXX-XXXX</p>
             </div>
-
-            <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Company Name" required>
-                <textarea placeholder="Tell us about your needs..." rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
         </div>
     </section>
 
@@ -960,19 +895,6 @@
                 updateActiveLink(currentSection);
             }
         });
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            
-            const name = form.querySelector('input[type="text"]').value;
-            const email = form.querySelector('input[type="email"]').value;
-            const company = form.querySelectorAll('input[type="text"]')[1].value;
-
-            alert(`Thank you, ${name}! We've received your inquiry and will contact you shortly at ${email}. We're excited to help ${company} build a great team!`);
-            
-            form.reset();
-        }
 
         document.addEventListener('DOMContentLoaded', () => {
             updateActiveLink('home');
