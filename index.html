@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KConsultancy - Strategic Talent Placement & Manpower Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -45,7 +45,7 @@
         }
 
         .logo-section:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .logo-icon {
@@ -55,10 +55,6 @@
             align-items: center;
             justify-content: center;
             transition: transform 0.3s ease;
-        }
-
-        .logo-section:hover .logo-icon {
-            transform: rotate(10deg);
         }
 
         .logo-icon img {
@@ -74,11 +70,24 @@
         }
 
         .brand-name {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 400;
             color: #1a1a1a;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .brand-name .k-bold {
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .brand-name .consultancy-regular {
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
         }
 
         .brand-subtitle {
@@ -629,7 +638,9 @@
                 <img src="https://raw.githubusercontent.com/aconite14/KConsultation/main/assets/images/logo.svg" alt="KConsultancy Logo" />
             </div>
             <div class="brand-text">
-                <div class="brand-name">KConsultancy</div>
+                <div class="brand-name">
+                    <span class="k-bold">K</span><span class="consultancy-regular">Consultancy</span>
+                </div>
                 <div class="brand-subtitle">Manpower Solutions</div>
             </div>
         </div>
