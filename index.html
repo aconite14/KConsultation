@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KConsultation - Professional Consultation Services</title>
+    <title>KConsultancy - Strategic Talent Placement & Manpower Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -51,7 +51,7 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -106,7 +106,7 @@
         }
 
         nav a:hover {
-            color: #667eea;
+            color: #1a4d2e;
         }
 
         nav a::after {
@@ -116,7 +116,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #667eea;
+            background: #1a4d2e;
             transition: width 0.3s ease;
         }
 
@@ -125,7 +125,7 @@
         }
 
         nav a.active {
-            color: #667eea;
+            color: #1a4d2e;
         }
 
         nav a.active::after {
@@ -181,7 +181,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
             color: white;
             gap: 30px;
         }
@@ -210,6 +210,7 @@
             opacity: 0.95;
             max-width: 600px;
             animation: slideInUp 0.8s ease-out 0.2s both;
+            line-height: 1.6;
         }
 
         @keyframes slideInUp {
@@ -261,6 +262,7 @@
             text-align: center;
             animation: scaleIn 0.6s ease-out forwards;
             opacity: 0;
+            border-top: 4px solid #1a4d2e;
         }
 
         @keyframes scaleIn {
@@ -283,6 +285,11 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
+        .service-icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
         .service-card h3 {
             font-size: 20px;
             margin-bottom: 15px;
@@ -293,70 +300,6 @@
             font-size: 14px;
             color: #666;
             line-height: 1.6;
-        }
-
-        /* Portfolio Section */
-        .portfolio-section {
-            text-align: center;
-        }
-
-        .portfolio-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            margin-bottom: 50px;
-            color: #1a1a1a;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            animation: slideInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .portfolio-card:nth-child(1) { animation-delay: 0.1s; }
-        .portfolio-card:nth-child(2) { animation-delay: 0.2s; }
-        .portfolio-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .portfolio-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 48px;
-        }
-
-        .portfolio-info {
-            padding: 25px;
-            text-align: left;
-        }
-
-        .portfolio-info h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-        }
-
-        .portfolio-info p {
-            font-size: 14px;
-            color: #666;
         }
 
         /* About Section */
@@ -372,7 +315,7 @@
         }
 
         .about-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             padding: 50px 40px;
@@ -381,6 +324,136 @@
             line-height: 1.8;
             font-size: 16px;
             color: #555;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            text-align: center;
+        }
+
+        .approach-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .approach-card {
+            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            animation: slideInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .approach-card:nth-child(1) { animation-delay: 0.1s; }
+        .approach-card:nth-child(2) { animation-delay: 0.2s; }
+        .approach-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .approach-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .approach-number {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .approach-content {
+            padding: 30px;
+            color: white;
+            text-align: left;
+        }
+
+        .approach-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .approach-content p {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            background: #f5f5f5;
+        }
+
+        .why-us-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .why-us-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-us-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            animation: slideInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .why-us-item:nth-child(1) { animation-delay: 0.1s; }
+        .why-us-item:nth-child(2) { animation-delay: 0.2s; }
+        .why-us-item:nth-child(3) { animation-delay: 0.3s; }
+        .why-us-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .why-us-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-us-icon {
+            font-size: 32px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .why-us-text h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1a4d2e;
+        }
+
+        .why-us-text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
         }
 
         /* Contact Section */
@@ -424,7 +497,7 @@
         .contact-form textarea:focus {
             outline: none;
             background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 10px rgba(26, 77, 46, 0.5);
         }
 
         .contact-form button {
@@ -484,97 +557,140 @@
         <div class="logo-section" onclick="scrollToSection('home')">
             <div class="logo-icon">K</div>
             <div class="brand-text">
-                <div class="brand-name">KConsultation</div>
-                <div class="brand-subtitle">Professional Consulting</div>
+                <div class="brand-name">KConsultancy</div>
+                <div class="brand-subtitle">Manpower Solutions</div>
             </div>
         </div>
 
         <nav>
             <a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a>
-            <a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a>
-            <a href="#portfolio" class="nav-link" onclick="scrollToSection('portfolio')">Portfolio</a>
             <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
-            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Consultation</a>
+            <a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a>
+            <a href="#approach" class="nav-link" onclick="scrollToSection('approach')">Our Approach</a>
+            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Started</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="section hero">
-        <h1>Welcome to KConsultation</h1>
-        <p>Professional consulting services tailored to your business needs. We help you achieve excellence and drive growth.</p>
-        <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Schedule a Consultation</a>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section services-section">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Strategic Consulting</h3>
-                <p>Develop comprehensive strategies to drive your business growth and achieve market leadership.</p>
-            </div>
-            <div class="service-card">
-                <h3>Business Analysis</h3>
-                <p>In-depth analysis to identify opportunities and optimize your business operations.</p>
-            </div>
-            <div class="service-card">
-                <h3>Implementation Support</h3>
-                <p>Expert guidance throughout your project implementation and change management process.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio-section">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="portfolio-image">📊</div>
-                <div class="portfolio-info">
-                    <h3>Digital Transformation</h3>
-                    <p>Led successful digital transformation for Fortune 500 company, increasing efficiency by 40%.</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-image">🚀</div>
-                <div class="portfolio-info">
-                    <h3>Market Expansion</h3>
-                    <p>Developed market entry strategy for tech startup, successful expansion into 3 new regions.</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <div class="portfolio-image">⚙️</div>
-                <div class="portfolio-info">
-                    <h3>Process Optimization</h3>
-                    <p>Implemented operational improvements reducing costs by 25% while maintaining quality.</p>
-                </div>
-            </div>
-        </div>
+        <h1>Building Great Teams Through Strategy & Precision</h1>
+        <p>Strategic talent placement that goes beyond recruitment. We connect people, purpose, and potential with clarity and intention.</p>
+        <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Start Your Journey</a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
-        <h2>About Us</h2>
+        <h2>Who We Are</h2>
         <div class="about-content">
-            <p>KConsultation is a leading professional consulting firm with over 10 years of experience in helping businesses achieve their goals. Our team of expert consultants brings deep industry knowledge and proven strategies to drive sustainable growth and success.</p>
-            <p>We are committed to delivering exceptional value through innovative solutions and personalized service for each of our clients.</p>
+            <p>KConsultancy is a manpower consultancy built on the belief that great teams are not formed by chance, but through clarity, understanding, and precision. We take a strategic approach to talent placement, going beyond traditional recruitment to truly understand the needs of each organization and the potential of every individual.</p>
+            
+            <p>At KConsultancy, we recognize that hiring is not simply about filling roles. It is about building the foundation of a company's future. We invest time in understanding our clients on a deeper level—their vision, culture, structure, and long-term goals—so that every recommendation we make is intentional and aligned.</p>
+            
+            <p>At the same time, we approach every candidate with equal care. We look beyond qualifications and experience to understand their motivations, strengths, and aspirations. This allows us to create connections that are not only professionally suitable, but also meaningful and sustainable.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Strategic Talent Placement</h3>
+                <p>Carefully curated candidates aligned with your organizational vision, culture, and long-term goals. We prioritize quality over quantity.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Executive Search</h3>
+                <p>In-depth recruitment for leadership positions. We understand your business needs and find leaders who can drive growth and vision.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Workforce Development</h3>
+                <p>More than placement—we act as strategic partners in building stronger, more cohesive teams for sustainable success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="section approach-section">
+        <h2>Our Three-Pillar Approach</h2>
+        <div class="approach-grid">
+            <div class="approach-card">
+                <div class="approach-number">1</div>
+                <div class="approach-content">
+                    <h3>Deep Understanding</h3>
+                    <p>We invest time in understanding your organization—your vision, culture, values, structure, and long-term goals. This clarity guides every recommendation.</p>
+                </div>
+            </div>
+            <div class="approach-card">
+                <div class="approach-number">2</div>
+                <div class="approach-content">
+                    <h3>Candidate-Centric Care</h3>
+                    <p>We look beyond résumés to understand motivations, strengths, and aspirations. We ensure candidates find opportunities where they can truly grow.</p>
+                </div>
+            </div>
+            <div class="approach-card">
+                <div class="approach-number">3</div>
+                <div class="approach-content">
+                    <h3>Quality Over Quantity</h3>
+                    <p>Rather than presenting large pools of options, we deliver carefully curated talent that meets high standards of fit and readiness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="section why-us-section">
+        <h2>Why Choose KConsultancy?</h2>
+        <div class="why-us-list">
+            <div class="why-us-item">
+                <div class="why-us-icon">🎯</div>
+                <div class="why-us-text">
+                    <h3>Strategic Partnership</h3>
+                    <p>We act as strategic partners in your workforce development, not just service providers. Your success is our mission.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon">🔗</div>
+                <div class="why-us-text">
+                    <h3>Intentional Connections</h3>
+                    <p>Every introduction is made with purpose. We ensure both company and candidate are positioned for meaningful, long-term success.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon">⭐</div>
+                <div class="why-us-text">
+                    <h3>Quality-Focused Process</h3>
+                    <p>Our commitment to quality means you receive candidates who are truly ready, not just available. Every placement reflects our high standards.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon">💡</div>
+                <div class="why-us-text">
+                    <h3>Deep Industry Expertise</h3>
+                    <p>We understand the nuances of your industry and the specific skills and personalities needed for your organization to thrive.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
-        <h2>Get In Touch</h2>
+        <h2>Let's Connect</h2>
+        <p style="margin-bottom: 30px; font-size: 16px; opacity: 0.9;">Ready to build your dream team? Let's talk about how KConsultancy can help.</p>
         <form class="contact-form" onsubmit="handleFormSubmit(event)">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <input type="text" placeholder="Company Name" required>
+            <textarea placeholder="Tell us about your needs..." rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 KConsultation. All rights reserved. | Professional Consulting Services</p>
+        <p>&copy; 2026 KConsultancy. All rights reserved. | Strategic Manpower Solutions</p>
     </footer>
 
     <script>
@@ -624,10 +740,11 @@
             // Get form values
             const name = form.querySelector('input[type="text"]').value;
             const email = form.querySelector('input[type="email"]').value;
+            const company = form.querySelectorAll('input[type="text"]')[1].value;
             const message = form.querySelector('textarea').value;
 
             // Show success message
-            alert(`Thank you, ${name}! We've received your message and will get back to you soon.`);
+            alert(`Thank you, ${name}! We've received your inquiry and will contact you shortly at ${email}. We're excited to help ${company} build a great team!`);
             
             // Reset form
             form.reset();
