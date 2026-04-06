@@ -569,21 +569,63 @@
             background: linear-gradient(135deg, #3967F0 0%, #2952C3 100%);
             color: white;
             text-align: center;
+            padding: 80px 50px;
         }
 
-        .contact-section h2 {
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-label {
             font-family: 'Inter', sans-serif;
-            font-size: 42px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .contact-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 50px;
-            letter-spacing: -0.3px;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
             line-height: 1.2;
         }
 
-        .contact-section > p {
+        .contact-title span {
+            background: linear-gradient(135deg, #D8740E 0%, #E8930F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-desc {
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             font-weight: 400;
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            letter-spacing: 0.2px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
             letter-spacing: 0.2px;
         }
 
@@ -694,6 +736,20 @@
             .section {
                 padding: 40px 20px;
             }
+
+            .contact-section {
+                padding: 60px 20px;
+            }
+
+            .contact-title {
+                font-size: 36px;
+            }
+
+            .contact-info {
+                gap: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -718,7 +774,7 @@
             <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
             <a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a>
             <a href="#approach" class="nav-link" onclick="scrollToSection('approach')">Our Approach</a>
-            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Started</a>
+            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Consultation</a>
         </nav>
     </header>
 
@@ -727,7 +783,7 @@
         <div class="hero-content">
             <h1>Building Great Teams Through Strategy & Precision</h1>
             <p>Strategic talent placement that goes beyond recruitment. We connect people, purpose, and potential with clarity and intention.</p>
-            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Start Your Journey</a>
+            <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Get Consultation</a>
         </div>
     </section>
 
@@ -829,16 +885,34 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <h2>Let's Connect</h2>
-        <p style="margin-bottom: 30px; font-size: 16px; opacity: 0.9;">Ready to build your dream team? Let's talk about how KConsultancy can help.</p>
-        <form class="contact-form" onsubmit="handleFormSubmit(event)">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Company Name" required>
-            <textarea placeholder="Tell us about your needs..." rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            
+            <p class="contact-label">— GET IN TOUCH</p>
+            
+            <h2 class="contact-title">
+                Begin Your <span>Partnership</span><br>
+                With Confidence
+            </h2>
+
+            <p class="contact-desc">
+                Whether you're building a high-performing team or exploring your next opportunity,
+                KConsultancy is here to guide you with clarity and precision.
+            </p>
+
+            <div class="contact-info">
+                <p>hello@kconsultancy.com</p>
+                <p>+62 812-XXXX-XXXX</p>
+            </div>
+
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Company Name" required>
+                <textarea placeholder="Tell us about your needs..." rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
