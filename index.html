@@ -3,83 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KConsultation - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Consultation Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        .section {
+            padding: 60px 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-
-<nav class="navbar">
-    <div class="container">
-        <h1>KConsultation</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav>
+        <a href="#hero">Hero</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="hero" class="section hero">
+        <h1>Welcome to Our Consultation Service</h1>
+        <p>Your path to success starts here.</p>
     </div>
-</nav>
-
-<header class="hero">
-    <div class="content">
-        <h2>Your Trusted Consultation Service</h2>
-        <p>We provide professional consulting services to help you succeed.</p>
+    <div id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="card">Service 1</div>
+        <div class="card">Service 2</div>
+        <div class="card">Service 3</div>
     </div>
-    <div class="image">
-        <img src="hero-image.jpg" alt="Consultation Image">
+    <div id="team" class="section">
+        <h2>Meet Our Team</h2>
+        <div class="card">Member 1</div>
+        <div class="card">Member 2</div>
+        <div class="card">Member 3</div>
     </div>
-</header>
-
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Service 1</h3>
-            <p>Description of service 1.</p>
-        </div>
-        <div class="card">
-            <h3>Service 2</h3>
-            <p>Description of service 2.</p>
-        </div>
-        <div class="card">
-            <h3>Service 3</h3>
-            <p>Description of service 3.</p>
-        </div>
+    <div id="projects" class="section">
+        <h2>Our Projects</h2>
+        <div class="card">Project 1</div>
+        <div class="card">Project 2</div>
+        <div class="card">Project 3</div>
     </div>
-</section>
-
-<section class="team">
-    <h2>Meet Our Team</h2>
-    <div class="team-member">
-        <h3>Team Member Name</h3>
-        <p>Position</p>
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: example@example.com</p>
+        <p>Phone: (123) 456-7890</p>
     </div>
-    <div class="team-member">
-        <h3>Team Member Name</h3>
-        <p>Position</p>
-    </div>
-</section>
-
-<section class="projects">
-    <h2>Our Projects</h2>
-    <!-- Project entries here -->
-</section>
-
-<section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2026 KConsultation. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
