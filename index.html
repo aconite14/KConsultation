@@ -47,7 +47,7 @@
         }
 
         .logo-section:hover {
-            transform: scale(1.02);
+            transform: scale(1.08);
         }
 
         .logo-icon {
@@ -851,6 +851,7 @@
             const section = document.getElementById(sectionId);
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Update the active link immediately after clicking
                 updateActiveLink(sectionId);
             }
         }
@@ -865,14 +866,18 @@
             });
         }
 
+        // Detect scroll position and update active link
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section');
             let currentSection = '';
 
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
+                const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                // If scrolled to top of page, set home as active
+                if (window.scrollY < 100) {
+                    currentSection = 'home';
+                } else if (window.scrollY >= sectionTop - 150 && window.scrollY < sectionTop + sectionHeight - 150) {
                     currentSection = section.getAttribute('id');
                 }
             });
