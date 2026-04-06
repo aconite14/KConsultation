@@ -647,21 +647,32 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
+
+        .hero-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
         
         .btn-outline {
             padding: 15px 40px;
             font-size: 16px;
-            border: 1.5px solid white;
+            border: 1.5px solid rgba(255,255,255,0.8);
             color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 4px;
             background: transparent;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
+        
         
         .btn-outline:hover {
             background: white;
             color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .hero .cta-button {
