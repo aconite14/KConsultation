@@ -61,9 +61,10 @@
             transform: rotate(10deg);
         }
 
-        .logo-icon svg {
+        .logo-icon img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
 
         .brand-text {
@@ -158,7 +159,7 @@
         .hero {
             height: 100vh;
             width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><rect fill="%23f0f0f0" width="100%" height="100%"/></svg>');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://raw.githubusercontent.com/aconite14/KConsultation/main/assets/images/hero-bg.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -625,12 +626,7 @@
     <header>
         <div class="logo-section" onclick="scrollToSection('home')">
             <div class="logo-icon">
-                <svg width="403" height="403" viewBox="0 0 403 403" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="16.5" y="16.5" width="369.615" height="369.615" stroke="#D8740E" stroke-width="33"/>
-                    <path d="M215.121 64.3911L119.446 196.992L129.114 212.501L217.727 340.208H271.416L171.857 197.01L266.203 64.3911H215.121Z" fill="#3967F0"/>
-                    <path d="M283.913 64.3911L188.238 196.992L197.907 212.501L303.474 369.574H357.163L240.649 197.01L334.996 64.3911H283.913Z" fill="#D8740E"/>
-                    <path d="M109.319 28.8077H62.4065V338.224H109.319V194.96V161.475V28.8077Z" fill="#D8740E"/>
-                </svg>
+                <img src="https://raw.githubusercontent.com/aconite14/KConsultation/main/assets/images/logo.svg" alt="KConsultancy Logo" />
             </div>
             <div class="brand-text">
                 <div class="brand-name">KConsultancy</div>
