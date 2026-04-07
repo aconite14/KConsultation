@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KConsultancy - Strategic Talent Placement & Manpower Solutions</title>
+    <title>KConsultancy.asia - Strategic Talent Placement & Manpower Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -175,7 +175,7 @@
 
         /* Hero Section - Full Screen with Background Image */
         .hero {
-            height: 100vh;
+            min-height: calc(100vh - 70px);
             width: 100%;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://raw.githubusercontent.com/aconite14/KConsultation/main/assets/images/hero-bg.jpeg');
             background-size: cover;
@@ -190,6 +190,7 @@
             gap: 30px;
             position: relative;
             padding: 0 50px;
+			overflow: hidden;
         }
 
         .hero::before {
@@ -289,8 +290,15 @@
 
         /* Services Section */
         .services-section {
-            text-align: center;
-        }
+			position: relative;
+
+			width: 100vw;
+			left: 50%;
+			margin-left: -50vw;
+
+			padding: 100px 0;
+			overflow: hidden;
+		}
 
         .services-section h2 {
             font-family: 'Inter', sans-serif;
@@ -485,20 +493,10 @@
             animation: slideInUp 0.6s ease-out forwards;
             opacity: 0;
 			position: relative;
+			min-height: 280px;
         }
 		
-		.approach-card:not(:last-child)::after {
-			content: "›";
-			position: absolute;
-			right: -25px;
-			top: 50%;
-			transform: translateY(-50%);
-			
-			font-size: 40px;
-			color: #11224D;
-			opacity: 0.4;
-			font-weight: 300;
-		}
+	
 
         .approach-card:nth-child(1) { 
             animation-delay: 0.1s;
@@ -561,6 +559,12 @@
         /* Why Us Section */
         .why-us-section {
 			position: relative;
+
+			width: 100vw;
+			left: 50%;
+			margin-left: -50vw;
+
+			padding: 100px 0;
 			overflow: hidden;
 		}
 		
@@ -818,16 +822,54 @@
 		
 		.mesh {
 			position: absolute;
+			bottom: 0;
+			left: 0;
 			width: 100%;
-			height: 100%;
+			height: 50%;
 
 			background:
-				radial-gradient(at 20% 30%, rgba(59,130,246,0.25) 0px, transparent 50%),
-				radial-gradient(at 80% 20%, rgba(96,165,250,0.2) 0px, transparent 50%),
-				radial-gradient(at 70% 80%, rgba(37,99,235,0.2) 0px, transparent 50%),
-				radial-gradient(at 30% 70%, rgba(147,197,253,0.15) 0px, transparent 50%);
+				radial-gradient(at 20% 80%, rgba(59,130,246,0.25), transparent 60%),
+				radial-gradient(at 60% 70%, rgba(96,165,250,0.2), transparent 60%),
+				radial-gradient(at 80% 90%, rgba(37,99,235,0.2), transparent 60%),
+				radial-gradient(at 40% 85%, rgba(147,197,253,0.15), transparent 60%);
+
+			filter: blur(80px);
 			
-			filter: blur(60px);
+			mask-image: linear-gradient(
+				to top,
+				black 40%,
+				transparent 100%
+			);
+			
+			clip-path: polygon(
+				0% 100%,
+				0% 65%,
+				20% 70%,
+				40% 60%,
+				60% 68%,
+				80% 62%,
+				100% 70%,
+				100% 100%
+			);
+		}
+		
+		.mesh2 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 2%;
+
+			background: #1a1a1a;
+
+			filter: blur(80px);
+			
+			mask-image: linear-gradient(
+				to bottom,
+				black 40%,
+				transparent 80%
+			);
+		
 		}
 		
 		.wave-1 {
@@ -851,9 +893,9 @@
 			filter: blur(30px);
 		}
 		
-				.wave-2 {
+			.wave-2 {
 			position: absolute;
-			bottom: -80px;
+			bottom: -50px;
 			left: 0;
 			width: 100%;
 			height: 250px;
@@ -872,9 +914,105 @@
 			filter: blur(40px);
 		}
 		
-		.mesh {
-			animation: float 12s ease-in-out infinite alternate;
+		.wave-3 {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 100%;
+			height: 200px;
+
+			background: linear-gradient(
+				to right,
+				rgba(59,130,246,0.2),
+				rgba(96,165,250,0.1)
+			);
+
+			clip-path: polygon(
+				0% 65%, 18% 55%, 35% 68%, 55% 58%, 
+				75% 70%, 100% 62%, 100% 100%, 0% 100%
+			);
+
+			filter: blur(30px);
 		}
+		
+		.wave-4 {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 100%;
+			height: 250px;
+
+			background: linear-gradient(
+				to right,
+				rgba(37,99,235,0.15),
+				rgba(147,197,253,0.1)
+			);
+
+			clip-path: polygon(
+				0% 75%, 22% 65%, 48% 78%, 72% 68%, 
+				100% 82%, 100% 100%, 0% 100%
+			);
+
+			filter: blur(40px);
+		}
+		
+		.wave-5 {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 100%;
+			height: 200px;
+
+			background: linear-gradient(
+				to right,
+				rgba(59,130,246,0.2),
+				rgba(96,165,250,0.1)
+			);
+
+			clip-path: polygon(
+				0% 70%, 15% 50%, 30% 75%, 50% 55%, 
+				70% 78%, 90% 60%, 100% 68%, 100% 100%, 0% 100%
+			);
+
+			filter: blur(30px);
+		}
+		
+		.wave-6 {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 100%;
+			height: 250px;
+
+			background: linear-gradient(
+				to right,
+				rgba(37,99,235,0.15),
+				rgba(147,197,253,0.1)
+			);
+
+			clip-path: polygon(
+				0% 80%, 20% 65%, 45% 82%, 70% 70%, 
+				100% 85%, 100% 100%, 0% 100%
+			);
+
+			filter: blur(40px);
+		}
+
+		.scribble {
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			width: 100%;
+			height: 200px;
+
+			pointer-events: none;
+			z-index: 1;
+		}
+
+			.scribble svg {
+				width: 100%;
+				height: 100%;
+			}	
 
 		@keyframes float {
 			from { transform: translateY(0px); }
@@ -895,15 +1033,6 @@
 
         /* Responsive */
 		
-		@media (max-width: 768px) {
-			.approach-card:not(:last-child)::after {
-				content: "↓";
-				right: 50%;
-				top: auto;
-				bottom: -30px;
-				transform: translateX(50%);
-			}
-		}
 		
 		@media (max-width: 768px) {
 			.why-us-wrapper {
@@ -930,6 +1059,18 @@
 		
 		@media (max-width: 768px) {
 			.why-us-list {
+				grid-template-columns: 1fr;
+			}
+		}
+		
+		@media (max-width: 1024px) {
+			.approach-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.approach-grid {
 				grid-template-columns: 1fr;
 			}
 		}
@@ -998,7 +1139,7 @@
             </div>
             <div class="brand-text">
                 <div class="brand-name">
-                    <span class="k-bold">K</span><span class="consultancy-regular">Consultancy</span>
+                    <span class="k-bold">K</span><span class="consultancy-regular">Consultancy.asia</span>
                 </div>
                 <div class="brand-subtitle">Manpower Solutions</div>
             </div>
@@ -1015,7 +1156,29 @@
 
     <!-- Hero Section - Full Screen with Left Aligned Content -->
     <section id="home" class="hero">
+		<div class="bg-decor">
+			<div class="scribble">
+				<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+					<path d="M0,400 C300,80 600,520 900,240 C1200,20 1350,420 1440,260"
+						  stroke="white"
+						  stroke-width="3"
+						  fill="none"
+						  opacity="1"/>
+
+					<path d="M0,410 C200,200 400,500 700,260 C1000,40 1200,420 1440,250"
+						  stroke="white"
+						  stroke-width="3"
+						  fill="none"
+						  opacity="1"/>
+				</svg>
+			</div>
+			<div class="wave wave-4"></div>
+			<div class="wave wave-5"></div>
+			<div class="wave wave-6"></div>
+		</div>
+		
         <div class="hero-content">
+		
             <h1>Building Great Teams Through Strategy & Precision</h1>
             <p>Strategic talent placement that goes beyond recruitment. We connect people, purpose, and potential with clarity and intention.</p>
             <div class="hero-buttons">
@@ -1026,7 +1189,32 @@
     </section>
 	
     <!-- Services Section -->
-    <section id="services" class="section services-section">
+    <section id="services" class="services-section">
+	
+				<div class="bg-decor">
+					<div class="mesh2"></div>
+					<div class="mesh"></div>
+					<div class="scribble">
+						<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+							<path d="M0,380 C180,260 320,420 520,300 C700,200 880,420 1080,300 C1240,220 1360,340 1440,300"
+								  stroke="white"
+								  stroke-width="2"
+								  fill="none"
+								  opacity="0.4"/>
+
+							<path d="M0,400 C150,300 280,450 460,280 C620,150 820,420 1000,260 C1200,100 1350,360 1440,280"
+								  stroke="white"
+								  stroke-width="2"
+								  fill="none"
+								  opacity="0.7"/>
+						</svg>
+					<div class="wave wave-1"></div>
+					<div class="wave wave-2"></div>
+					<div class="wave wave-3"></div>
+					</div>	
+				</div>
+	
+	<div class="container">
         <h2>What We Offer</h2>
         <div class="services-grid">
             <div class="service-card">
@@ -1060,53 +1248,95 @@
 				</div>
             </div>
         </div>
+	</div>
     </section>
 	
     <!-- Why Choose Us Section -->
-    <section id="why-us" class="section why-us-section">
+    <section id="why-us" class="why-us-section">
 	
-        <h2>Why Choose KConsultancy?</h2>
-		<div  <div class="why-us-wrapper">
-			<div class="why-us-list">
-				<div class="why-us-item">
-					<div class="why-us-text">
-						<h3>Strategic Partnership</h3>
-						<p>We act as strategic partners in your workforce development, not just service providers. Your success is our mission.</p>
+				<div class="bg-decor">
+					<div class="mesh2"></div>
+					<div class="mesh"></div>
+					<div class="scribble">
+						<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+							<path d="M0,300 C200,200 400,350 600,250 C800,150 1000,350 1200,250 C1300,200 1400,300 1440,280"
+								  stroke="white"
+								  stroke-width="2"
+								  fill="none"
+								  opacity="1"/>
+
+							<path d="M0,320 C300,250 500,300 700,280 C900,260 1100,320 1440,260"
+								  stroke="white"
+								  stroke-width="1"
+								  fill="none"
+								  opacity="1"/>
+						</svg>
 					</div>
+					<div class="wave wave-2"></div>
+					<div class="wave wave-3"></div>
+					<div class="wave wave-4"></div>
 				</div>
-				<div class="why-us-item">
-					<div class="why-us-text">
-						<h3>Intentional Connections</h3>
-						<p>Every introduction is made with purpose. We ensure both company and candidate are positioned for meaningful, long-term success.</p>
-					</div>
-				</div>
-				<div class="why-us-item">
-					<div class="why-us-text">
-						<h3>Quality-Focused Process</h3>
-						<p>Our commitment to quality means you receive candidates who are truly ready, not just available. Every placement reflects our high standards.</p>
-					</div>
-				</div>
-				<div class="why-us-item">
-					<div class="why-us-text">
-						<h3>Deep Industry Expertise</h3>
-						<p>We understand the nuances of your industry and the specific skills and personalities needed for your organization to thrive.</p>
-					</div>
+				
+				<div class="container">
+					<h2>Why Choose KConsultancy?</h2>
+					<div class="why-us-wrapper">
+							<div class="why-us-list">
+								<div class="why-us-item">
+									<div class="why-us-text">
+										<h3>Strategic Partnership</h3>
+										<p>We act as strategic partners in your workforce development, not just service providers. Your success is our mission.</p>
+									</div>
+								</div>
+								<div class="why-us-item">
+									<div class="why-us-text">
+										<h3>Intentional Connections</h3>
+										<p>Every introduction is made with purpose. We ensure both company and candidate are positioned for meaningful, long-term success.</p>
+									</div>
+								</div>
+								<div class="why-us-item">
+									<div class="why-us-text">
+										<h3>Quality-Focused Process</h3>
+										<p>Our commitment to quality means you receive candidates who are truly ready, not just available. Every placement reflects our high standards.</p>
+									</div>
+								</div>
+								<div class="why-us-item">
+									<div class="why-us-text">
+										<h3>Deep Industry Expertise</h3>
+										<p>We understand the nuances of your industry and the specific skills and personalities needed for your organization to thrive.</p>
+									</div>
+								</div>
+							</div>
+						
+						 <!-- RIGHT: IMAGE -->
+						<div class="why-us-image"></div>
 				</div>
 			</div>
-			
-		     <!-- RIGHT: IMAGE -->
-            <div class="why-us-image"></div>
-
-        </div>
     </section>
 	
     <!-- Approach Section -->
     <section id="approach" class="section approach-section">
         
 		<div class="bg-decor">
+			<div class="mesh2"></div>
 			<div class="mesh"></div>
+			<div class="scribble">
+				<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+					<path d="M0,300 C200,200 400,350 600,250 C800,150 1000,350 1200,250 C1300,200 1400,300 1440,280"
+						  stroke="white"
+						  stroke-width="2"
+						  fill="none"
+						  opacity="1"/>
+
+					<path d="M0,320 C300,250 500,300 700,280 C900,260 1100,320 1440,260"
+						  stroke="white"
+						  stroke-width="1"
+						  fill="none"
+						  opacity="1"/>
+				</svg>
+			</div>
+			<div class="wave wave-3`"></div>
 			<div class="wave wave-1"></div>
-			<div class="wave wave-2"></div>
+			<div class="wave wave-6"></div>
 		</div>
 		
 		<h2>Our Three-Pillar Approach</h2>
@@ -1190,7 +1420,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 KConsultancy. All rights reserved. | Strategic Manpower Solutions</p>
+        <p>&copy; 2026 KConsultancy.asia All rights reserved. | Strategic Manpower Solutions</p>
     </footer>
 
     <script>
