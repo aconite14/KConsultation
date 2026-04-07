@@ -32,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
+            position: fixed;
             top: 0;
             z-index: 1000;
             border-bottom: 3px solid #11224D;
@@ -196,12 +196,13 @@
 		
 		@media (max-width: 768px) {
 			.hero {
+				height: calc(100vh - 100px);
 				background: 
 					linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
 					url('https://raw.githubusercontent.com/aconite14/KConsultation/a3b0d2c212e4d157da23d712b64f059758cb6d08/assets/images/hero-img-Vertical.png');
 
 				background-size: cover;
-				background-position: top center;
+				background-position: bottom center;
 			}
 		}
 
